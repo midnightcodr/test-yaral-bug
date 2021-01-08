@@ -40,17 +40,16 @@ const plugins = [
           interval: 5 * 1000,
           max: 5
         },
-        // up to 10 requests per minute
+        // up to 10 requests per 15 seconds
         {
           id: getIP,
-          name: 'general1min',
-          interval: 60 * 1000,
+          name: 'general15sec',
+          interval: 15 * 1000,
           max: 10
         }
       ],
       enabled: true,
-      default: ['general1min'],
-      // default: ['general5sec', 'general1min'],
+      default: ['general15sec', 'general5sec'],
       cache: 'redisCache'
     }
   }
