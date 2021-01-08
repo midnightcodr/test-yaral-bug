@@ -3,7 +3,7 @@ services:
   app:
     build:
       context: .
-      dockerfile: app-Dockerfile
+      dockerfile: app/Dockerfile
     environment:
       - NODE_ENV=production
       - WAIT_HOSTS=redis:6379
